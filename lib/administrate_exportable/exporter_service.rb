@@ -58,18 +58,19 @@ module AdministrateExportable
     end
 
     def headers
-      attributes_to_export.map do |attribute_key, _|
-        attr_key = attribute_key.to_s
-
-        if attr_key.include?('_id')
-          attr_key
-        else
-          I18n.t(
-            "helpers.label.#{resource_class.name}.#{attr_key}",
-            default: attr_key,
-          ).titleize
-        end
-      end
+      ['a', 'b']
+      # attributes_to_export.map do |attribute_key, _|
+      #   attr_key = attribute_key.to_s
+      #
+      #   if attr_key.include?('_id')
+      #     attr_key
+      #   else
+      #     I18n.t(
+      #       "helpers.label.#{resource_class.name}.#{attr_key}",
+      #       default: attr_key,
+      #     ).titleize
+      #   end
+      # end
     end
 
     def attributes_to_export
